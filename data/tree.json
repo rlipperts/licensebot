@@ -1,0 +1,115 @@
+{
+  "title": "Derivatives open source",
+  "question": "Do you want to allow commercial use of your code? Permissive licenses (yes) allow derivative works to be licensed under any license, including proprietary licenses. Copyleft licenses (no) require derivative works to be licensed under the same license.",
+  "children": [
+    {
+      "answer": "yes",
+      "title": "Network access",
+      "children": [
+        {
+          "answer": "yes",
+          "title": "AGPL (Network protection)"
+        },
+        {
+          "answer": "no",
+          "title": "Proprietary linking",
+          "children": [
+            {
+              "answer": "yes",
+              "title": "LGPL (Weak copyleft)"
+            },
+            {
+              "answer": "no",
+              "title": "Specific ecosystem",
+              "children": [
+                {
+                  "answer": "yes",
+                  "title": "EPL 2.0 (Ecosystem-friendly)"
+                },
+                {
+                  "answer": "no",
+                  "title": "Creative work focus",
+                  "children": [
+                    {
+                      "answer": "yes",
+                      "title": "CC BY-SA (Copyleft, attribution)"
+                    },
+                    {
+                      "answer": "no",
+                      "title": "GPL (Strong copyleft)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },                      
+    {
+      "answer": "no",
+      "title": "Public domain",
+      "children": [
+        {
+          "answer": "yes",
+          "title": "Unlicense (no restrictions)"
+        },
+        {
+          "answer": "no",
+          "title": "Patent protection",
+          "children": [
+            {
+              "answer": "yes",
+              "title": "Apache 2.0 (Patent grant)"
+            },
+            {
+              "answer": "no",
+              "title": "Simplest license",
+              "children": [
+                {
+                  "answer": "yes",
+                  "title": "Minimal text",
+                  "children": [
+                    {
+                      "answer": "yes",
+                      "title": "ISC (Ultra-simple)"
+                    },
+                    {
+                      "answer": "no",
+                      "title": "MIT (Simple, popular)"
+                    }
+                  ]
+                },
+                {
+                  "answer": "no",
+                  "title": "Small library",
+                  "children": [
+                    {
+                      "answer": "yes",
+                      "title": "zLib (Lightweight)"
+                    },
+                    {
+                      "answer": "no",
+                      "title": "Endorsement protection",
+                      "children": [
+                          {
+                            "answer": "yes",
+                            "title": "BSD 3-Clause (no endorsement)"
+                          },
+                          {
+                            "answer": "no",
+                            "title": "BSD 2-Clause (Simple)"
+                          }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+  

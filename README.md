@@ -1,6 +1,13 @@
 # Licensebot
 _os license selection guided by a bot >>WORK IN PROGRESS<<_
 
+## Work Progress
+- [ ] create the decision tree
+    - [ ] does [open decision](open-decision.org) help here?
+- [ ] build the python decision making interface
+- [ ] create an interactive command-line process
+- [ ] build a telegram bot
+
 ## installation
 There are no PyPI releases. Neither are they planned.
 
