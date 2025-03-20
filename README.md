@@ -1,5 +1,5 @@
-# python_package_template
-_Default files and structure for python package repositories (aimed at personal use)_
+# Licensebot
+_os license selection guided by a bot >>WORK IN PROGRESS<<_
 
 ## installation
 There are no PyPI releases. Neither are they planned.
@@ -24,4 +24,4 @@ To setup this project to develop in it:
 
 ## usage
 
-Write a more or less detailed description on how to use your package!
+TODO

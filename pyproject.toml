@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "python-package-template"
+name = "licensebot"
 version = "0.2.0"
 description = ""
 authors = ["rlipperts <rlipperts@techfak.uni-bielefeld.de>"]
 readme = "README.md"
 packages = [
-    { include = "python_package_template", from = "src" },
+    { include = "licensebot", from = "src" },
 ]
 
 [tool.poetry.dependencies]
