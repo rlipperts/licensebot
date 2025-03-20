@@ -1,0 +1,45 @@
+name: template_tests
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  build:
+    if: github.event.repository.name != 'python_package_template'
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Check Readme
+      run: |
+        md5=($(md5sum README.md))
+        if [[ $md5 == "927c798066550364330de8f89b433e77" ]] ;then
+          echo 'Your readme still is in default template state, you should change it!'
+          exit 1
+        fi
+    - name: Check pyproject.toml
+      run: |
+        md5=($(md5sum pyproject.toml))
+        if [[ $md5 == "7a8d214edd1977d68cdf5438c432b7e8" ]] ;then
+          echo 'Your pyproject.toml still is in default template state, you should change it!'
+          exit 1
+        fi
+    - name: Check package_rename
+      run: |
+        dir="src/python_package_template"
+        if [[ -d "$dir" ]] ;then
+          echo 'You did not change the name of your package, you  should change it!'
+          exit 1
+        fi
+    - name: Check test_name
+      run: |
+        file="tests/test_module_name.py"
+        if [[ -f "$file" ]] ;then
+          echo 'You did not change the name of your test, you  should change it!'
+          exit 1
+        fi
+    - name: Remove this action
+      run: |
+        echo 'You have not removed this GitHub action - I strongly recommend you to!'
+        exit 1
