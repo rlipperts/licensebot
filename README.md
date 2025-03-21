@@ -8,6 +8,9 @@ _os license selection guided by a bot >>WORK IN PROGRESS<<_
 - [x] create an interactive command-line process
 - [x] steamline the process and clean the code
 - [ ] build a telegram bot
+    - [x] implement the skeleton
+    - [ ] implement a smart way to handle the bot token
+    - [ ] test the bot
 - [ ] when arrived at a decision, print whole license contents 
     - is there a website providing them in raw form? would be cumbersome to update them manually if they change
 - [ ] switch from the decision tree process to a different (and more fair) approach
