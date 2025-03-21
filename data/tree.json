@@ -1,51 +1,52 @@
 {
+  "branch": "root",
   "title": "Derivatives open source",
-  "question": "Do you want to allow commercial use of your code? Permissive licenses (yes) allow derivative works to be licensed under any license, including proprietary licenses. Copyleft licenses (no) require derivative works to be licensed under the same license.",
+  "body": "Do you want to allow commercial use of your code? Permissive licenses (yes) allow derivative works to be licensed under any license, including proprietary licenses. Copyleft licenses (no) require derivative works to be licensed under the same license.",
   "children": [
     {
-      "answer": "no",
+      "branch": "no",
       "title": "Network access",
-      "question": "Is your software accessed over a network? AGPL (yes) requires that users who interact with the software over a network must be able to download the source code.",
+      "body": "Is your software accessed over a network? AGPL (yes) requires that users who interact with the software over a network must be able to download the source code.",
       "children": [
         {
-          "answer": "yes",
+          "branch": "yes",
           "title": "AGPL (Network protection)",
-          "link": "https://www.gnu.org/licenses/agpl-3.0.en.html"
+          "body": "https://www.gnu.org/licenses/agpl-3.0.en.html"
         },
         {
-          "answer": "no",
+          "branch": "no",
           "title": "Proprietary linking",
-          "question": "Do you want to allow proprietary software to link to your code? If, for example, you write a library, LGPL (yes) allows for it to be used in proprietary software. More generally, it allows for proprietary software to link to LGPL-licensed software without open-sourcing the proprietary part.",
+          "body": "Do you want to allow proprietary software to link to your code? If, for example, you write a library, LGPL (yes) allows for it to be used in proprietary software. More generally, it allows for proprietary software to link to LGPL-licensed software without open-sourcing the proprietary part.",
           "children": [
             {
-              "answer": "yes",
+              "branch": "yes",
               "title": "LGPL (Weak copyleft)",
-              "link": "https://www.gnu.org/licenses/lgpl-3.0.html"
+              "body": "https://www.gnu.org/licenses/lgpl-3.0.html"
             },
             {
-              "answer": "no",
+              "branch": "no",
               "title": "Specific ecosystem",
-              "question": "Is your project tied to a specific ecosystem (e.g., Eclipse)? If yes, EPL 2.0 (yes) fits modular, ecosystem-friendly projects​. It allows the EPL-Licensed code to be combined with other code under a secondary license. Specifically, it allows to collectively release the code under the secondary license.",
+              "body": "Is your project tied to a specific ecosystem (e.g., Eclipse)? If yes, EPL 2.0 (yes) fits modular, ecosystem-friendly projects​. It allows the EPL-Licensed code to be combined with other code under a secondary license. Specifically, it allows to collectively release the code under the secondary license.",
               "children": [
                 {
-                  "answer": "yes",
+                  "branch": "yes",
                   "title": "EPL 2.0 (Ecosystem-friendly)",
-                  "link": "https://www.eclipse.org/legal/epl-2.0/"
+                  "body": "https://www.eclipse.org/legal/epl-2.0/"
                 },
                 {
-                  "answer": "no",
+                  "branch": "no",
                   "title": "Creative work focus",
-                  "question": "Is your project a creative work (e.g., art, music)? If yes, CC BY-SA (yes) is a copyleft license that is designed for creative works. It requires that derivative works be licensed under the same license, you have to be attributed as original author and what was changed if changes were made. If no, GPL (no) is a strong copyleft license that requires derivative works to be licensed under the same license.",
+                  "body": "Is your project a creative work (e.g., art, music)? If yes, CC BY-SA (yes) is a copyleft license that is designed for creative works. It requires that derivative works be licensed under the same license, you have to be attributed as original author and what was changed if changes were made. If no, GPL (no) is a strong copyleft license that requires derivative works to be licensed under the same license.",
                   "children": [
                     {
-                      "answer": "yes",
+                      "branch": "yes",
                       "title": "CC BY-SA (Copyleft, attribution)",
-                      "link": "https://creativecommons.org/licenses/by-sa/4.0/"
+                      "body": "https://creativecommons.org/licenses/by-sa/4.0/"
                     },
                     {
-                      "answer": "no",
+                      "branch": "no",
                       "title": "GPL (Strong copyleft)",
-                      "link": "https://www.gnu.org/licenses/gpl-3.0.en.html"
+                      "body": "https://www.gnu.org/licenses/gpl-3.0.en.html"
                     }
                   ]
                 }
@@ -56,70 +57,70 @@
       ]
     },                      
     {
-      "answer": "yes",
+      "branch": "yes",
       "title": "Public domain",
-      "question": "Do you want to release your code to the public domain? If yes, Unlicense (yes) is a public domain dedication that waives all copyright and related rights.",
+      "body": "Do you want to release your code to the public domain? Unlicense (yes) is a public domain dedication that waives all copyright and related rights.",
       "children": [
         {
-          "answer": "yes",
+          "branch": "yes",
           "title": "Unlicense (no restrictions)",
-          "link": "https://unlicense.org/"
+          "body": "https://unlicense.org/"
         },
         {
-          "answer": "no",
+          "branch": "no",
           "title": "Patent protection",
-          "question": "Do you want to be proteced from contributors patenting their contributions in hindsight? If yes, Apache 2.0 (yes) is a permissive license that explicitly states that contributors who patent their contributions have to allow you to use those patents.",
+          "body": "Do you want to be proteced from contributors patenting their contributions in hindsight? Apache 2.0 (yes) is a permissive license that explicitly states that contributors who patent their contributions have to allow you to use those patents.",
           "children": [
             {
-              "answer": "yes",
+              "branch": "yes",
               "title": "Apache 2.0 (Patent grant)",
-              "link": "https://www.apache.org/licenses/LICENSE-2.0.html"
+              "body": "https://www.apache.org/licenses/LICENSE-2.0.html"
             },
             {
-              "answer": "no",
+              "branch": "no",
               "title": "Simplest license",
-              "question": "Do you want the license to be easily understandable?",
+              "body": "Do you want the license to be easily understandable?",
               "children": [
                 {
-                  "answer": "yes",
+                  "branch": "yes",
                   "title": "Minimal text",
-                  "question": "Do you want the license to be as short as possible? If yes, ISC (yes) is an ultra-simple permissive license that fits in a tweet. Otherwise, MIT (no) is a simple, very popular permissive license.",
+                  "body": "Do you want the license to be as short as possible? ISC (yes) is an ultra-simple permissive license that fits in a tweet. MIT (no) is a simple, very popular permissive license.",
                   "children": [
                     {
-                      "answer": "yes",
+                      "branch": "yes",
                       "title": "ISC (Ultra-simple)",
-                      "link": "https://www.isc.org/licenses/"
+                      "body": "https://www.isc.org/licenses/"
                     },
                     {
-                      "answer": "no",
+                      "branch": "no",
                       "title": "MIT (Simple, popular)",
-                      "link": "https://mit-license.org/"
+                      "body": "https://mit-license.org/"
                     }
                   ]
                 },
                 {
-                  "answer": "no",
+                  "branch": "no",
                   "title": "Small library",
-                  "question": "Is your project a small library? If yes, zLib (yes) is a lightweight permissive license that is often used in small libraries. It explicitly states that the original work and author must not be missrepresented by derivative work.",
+                  "body": "Is your project a small library? zLib (yes) is a lightweight permissive license that is often used in small libraries. It explicitly states that the original work and author must not be missrepresented by derivative work.",
                   "children": [
                     {
-                      "answer": "yes",
+                      "branch": "yes",
                       "title": "zLib (Lightweight)"
                     },
                     {
-                      "answer": "no",
+                      "branch": "no",
                       "title": "Endorsement protection",
-                      "question": "Do you want to prevent others from using your name to promote their products? If yes, BSD 3-Clause (yes) is a permissive license that requires that the original author is not endorsed by derivative works. Otherwise BSD 2-Clause (no) is shorter by not including that non-endorsment clause.",
+                      "body": "Do you want to prevent others from using your name to promote their products? BSD 3-Clause (yes) is a permissive license that requires that the original author is not endorsed by derivative works. BSD 2-Clause (no) is shorter by not including that non-endorsment clause.",
                       "children": [
                         {
-                          "answer": "yes",
+                          "branch": "yes",
                           "title": "BSD 3-Clause (no endorsement)",
-                          "link": "https://opensource.org/license/BSD-3-clause"
+                          "body": "https://opensource.org/license/BSD-3-clause"
                         },
                         {
-                          "answer": "no",
+                          "branch": "no",
                           "title": "BSD 2-Clause (Simple)",
-                          "link": "https://opensource.org/license/BSD-2-clause"
+                          "body": "https://opensource.org/license/BSD-2-clause"
                         }
                       ]
                     }

@@ -28,6 +28,18 @@ files = [
 ]
 
 [[package]]
+name = "colored"
+version = "2.3.0"
+description = "Simple python library for color and formatting to terminal"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "colored-2.3.0-py3-none-any.whl", hash = "sha256:2f7f455dc2ed490531b0b8e0ecf8f8513bb28a150d9f12f0e48b023641a55185"},
+    {file = "colored-2.3.0.tar.gz", hash = "sha256:4daf9b3ed687a01d59005e1bd03f354475226b933abb9a01836d6dde926d4c6f"},
+]
+
+[[package]]
 name = "distlib"
 version = "0.3.9"
 description = "Distribution utilities"
@@ -246,4 +258,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "bdff09be2bafd65202bfda856af84474a74dde94284b16a22fc8efcce011fb19"
+content-hash = "f70d0a6f708fae14b0466c751f77611202db75e3504cb0980fc015634c38095f"

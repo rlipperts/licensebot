@@ -11,6 +11,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.12"
 anytree = "^2.12.1"
+colored = "^2.3.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit =  "^4.0"

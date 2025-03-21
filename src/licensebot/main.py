@@ -1,35 +1,19 @@
+# ruff: noqa: T201, D103
 import argparse
 from pathlib import Path
 
-from anytree import AnyNode
-from anytree.importer import JsonImporter
+from colored import fg, style, stylize
+
+from licensebot.decision import Decision
 
 """Load the tree and guide through it in a question process."""
 
-
-def load_tree(path: Path) -> AnyNode:
-    """Load the decision tree from a file."""
-    importer = JsonImporter()
-    with path.open() as file:
-        return importer.read(file)
+h1: str = f"{style('bold')}{style('underline')}"
+h2: str = f"{style('bold')}"
+body: str = f"{fg('dark_gray')}"
 
 
-def decision_process(tree: AnyNode) -> AnyNode:
-    next_node = tree
-    while next_node.children:
-        print(next_node.title)
-        if hasattr(next_node, "question"):
-            print(next_node.question)
-        children = {child.answer: child for child in next_node.children}
-        for child in children.values():
-            print(f"{child.answer}: {child.title}")
-        choice = input("Enter your choice: ").lower().strip()
-        next_node = children[choice]
-    print(f"Decision: {next_node.title}")
-    return next_node
-
-
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
         description="LicenseBot - A tool to guide through a decision tree.",
     )
@@ -49,9 +33,26 @@ def main():
     if args.verbose:
         print(f"Loading tree from {args.tree_file}...")
 
-    # Placeholder for loading and processing the tree
-    tree_root = load_tree(args.tree_file)
-    decision_process(tree_root)
+    # load the tree
+    decision_tree = Decision.load(args.tree_file)
+    # perform the decision process
+    state = decision_tree.state()
+    while not state.is_leaf:
+        print(stylize(state.title, h1))
+        print(stylize(state.body, body))
+        children = {child.branch: child for child in state.children}
+        print(stylize("\nOptions:", h2))
+        for branch, child in children.items():
+            if child.is_leaf:
+                print(f"\t{branch} ---> {stylize(child.title, fg('green'))}")
+            else:
+                print(f"\t{branch} ---> next question: {child.title}")
+        answer = input("\nYour answer: ")
+        print("\n\n")
+        decision_tree.next(answer)
+        state = decision_tree.state()
+    print(stylize(f"Your License: {state.title}", h1))
+    print(stylize(state.body, body))
 
 
 if __name__ == "__main__":
