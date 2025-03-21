@@ -2,10 +2,11 @@
 _os license selection guided by a bot >>WORK IN PROGRESS<<_
 
 ## Work Progress
-- [ ] create the decision tree
-    - [ ] does [open decision](open-decision.org) help here?
-- [ ] build the python decision making interface
-- [ ] create an interactive command-line process
+- [x] create the decision tree
+    - ~~[ ] does [open decision](open-decision.org) help here?~~ no it doesn't
+- [x] build the python decision making interface
+- [x] create an interactive command-line process
+- [ ] steamline the process and clean the code
 - [ ] build a telegram bot
 
 ## installation
