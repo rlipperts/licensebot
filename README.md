@@ -8,8 +8,11 @@ _os license selection guided by a bot >>WORK IN PROGRESS<<_
 - [x] create an interactive command-line process
 - [x] steamline the process and clean the code
 - [ ] build a telegram bot
-- [ ] when arrived at a leaf, print whole license contents 
+- [ ] when arrived at a decision, print whole license contents 
     - is there a website providing them in raw form? would be cumbersome to update them manually if they change
+- [ ] switch from the decision tree process to a different (and more fair) approach
+    - ask questions from [this table](https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses) and present the highest rating license with a short description and the second highest as a possible alternative
+
 
 ## installation
 There are no PyPI releases. Neither are they planned.
