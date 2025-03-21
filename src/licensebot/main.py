@@ -1,19 +1,12 @@
-# ruff: noqa: T201, D103
+# ruff: noqa: D103
 import argparse
 from pathlib import Path
 
-from colored import fg, style, stylize
-
+from licensebot.cmdline import run_cli
 from licensebot.decision import Decision
 
-"""Load the tree and guide through it in a question process."""
 
-h1: str = f"{style('bold')}{style('underline')}"
-h2: str = f"{style('bold')}"
-body: str = f"{fg('dark_gray')}"
-
-
-def main() -> None:
+def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="LicenseBot - A tool to guide through a decision tree.",
     )
@@ -28,31 +21,15 @@ def main() -> None:
         action="store_true",
         help="Enable verbose output.",
     )
-    args = parser.parse_args()
+    return parser.parse_args()
 
-    if args.verbose:
-        print(f"Loading tree from {args.tree_file}...")
 
+def main() -> None:
+    args = parse_args()
     # load the tree
     decision_tree = Decision.load(args.tree_file)
     # perform the decision process
-    state = decision_tree.state()
-    while not state.is_leaf:
-        print(stylize(state.title, h1))
-        print(stylize(state.body, body))
-        children = {child.branch: child for child in state.children}
-        print(stylize("\nOptions:", h2))
-        for branch, child in children.items():
-            if child.is_leaf:
-                print(f"\t{branch} ---> {stylize(child.title, fg('green'))}")
-            else:
-                print(f"\t{branch} ---> next question: {child.title}")
-        answer = input("\nYour answer: ")
-        print("\n\n")
-        decision_tree.next(answer)
-        state = decision_tree.state()
-    print(stylize(f"Your License: {state.title}", h1))
-    print(stylize(state.body, body))
+    run_cli(decision_tree)
 
 
 if __name__ == "__main__":

@@ -6,8 +6,10 @@ _os license selection guided by a bot >>WORK IN PROGRESS<<_
     - ~~[ ] does [open decision](open-decision.org) help here?~~ no it doesn't
 - [x] build the python decision making interface
 - [x] create an interactive command-line process
-- [ ] steamline the process and clean the code
+- [x] steamline the process and clean the code
 - [ ] build a telegram bot
+- [ ] when arrived at a leaf, print whole license contents 
+    - is there a website providing them in raw form? would be cumbersome to update them manually if they change
 
 ## installation
 There are no PyPI releases. Neither are they planned.
